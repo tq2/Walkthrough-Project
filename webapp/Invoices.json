@@ -40,10 +40,35 @@
             "ShippedDate": "2015-01-27T00:00:00",
             "Status": "A"
         },
+        
+        {
+            "ProductName": "Domato",
+            "Quantity": 120,
+            "ExtendedPrice": 3.71,
+            "ShipperName": "Fun Inc.",
+            "ShippedDate": "2015-01-27T00:00:00",
+            "Status": "A"
+        },
         {
             "ProductName": "Salt",
             "Quantity": 260,
             "ExtendedPrice": 2.2,
+            "ShipperName": "ACME",
+            "ShippedDate": "2015-04-12T00:00:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Banana",
+            "Quantity": 260,
+            "ExtendedPrice": 2.2,
+            "ShipperName": "ACME",
+            "ShippedDate": "2015-04-12T00:00:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Strawberry",
+            "Quantity": 5000,
+            "ExtendedPrice": 2.1,
             "ShipperName": "ACME",
             "ShippedDate": "2015-04-12T00:00:00",
             "Status": "A"

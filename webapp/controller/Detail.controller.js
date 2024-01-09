@@ -70,6 +70,7 @@ sap.ui.define([
 		},
 
 		onRatingChange(oEvent) {
+			debugger;
 			const fValue = oEvent.getParameter("value");
 			const oResourceBundle = this.getView().getModel("i18n").getResourceBundle();
 
