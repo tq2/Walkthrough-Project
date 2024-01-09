@@ -1,0 +1,128 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "com.demo.walkthrough.walkthrough",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.11.5",
+      "toolsId": "cabeb6b5-ad2d-4dd1-aa55-915e993658fa"
+		
+    },
+    "dataSources": {
+			"invoiceRemote": {
+				"uri": "V2/Northwind/Northwind.svc/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
+		}
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.120.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.demo.walkthrough.walkthrough.i18n.i18n",
+          "supportedLocales": [""],
+		      "fallbackLocale": ""
+        }
+      },
+      "invoice": {
+				"type": "sap.ui.model.json.JSONModel",
+		    "uri": "Invoices.json"
+      }
+    },
+    
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "type": "View",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "com.demo.walkthrough.walkthrough.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "overview",
+          "pattern": "",
+          "target": "overview"
+        },
+        {
+          "pattern": "detail/{invoicePath}",
+          "name": "detail",
+          "target": "detail"
+        }
+      ],
+      "targets": {
+          "overview":{
+            "viewId": "overview",
+		        "viewName": "Overview"
+          }, 
+          "detail": {
+            "viewId": "detail",
+            "viewName": "Detail"
+          }
+      }
+    },
+    "rootView": {
+      "viewName": "com.demo.walkthrough.walkthrough.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

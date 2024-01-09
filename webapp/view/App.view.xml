@@ -1,0 +1,42 @@
+<mvc:View
+    controllerName="com.demo.walkthrough.walkthrough.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+<!-- We don't add the Shell control to the declarative UI definition in the XML view if apps run in an external shell, like the SAP Fiori launchpad that already has a shell around the component UI.
+-->
+<Shell>
+    <App class="myAppDemoWT" id="app">
+    <!--
+        <pages>
+            <Page
+                backgroundDesign="Standard"
+                contentOnlyBusy="false"
+                enableScrolling="true"
+                floatingFooter="false"
+                navButtonTooltip=""
+                showFooter="true"
+                showHeader="true"
+                showNavButton="false"
+                showSubHeader="true"
+                title="{i18n>appTitle}"
+                titleAlignment="Auto"
+                titleLevel="Auto"
+            >
+                <content>
+                    <mvc:XMLView viewName="com.demo.walkthrough.walkthrough.view.HelloPanel"/>
+                    <mvc:XMLView viewName="com.demo.walkthrough.walkthrough.view.InvoiceList"/>
+                                    
+                </content>
+                <customHeader />
+                <footer />
+                <headerContent />
+                <landmarkInfo />
+                <subHeader />
+            </Page>
+        </pages>
+        -->
+    </App>
+</Shell>
+</mvc:View>
